@@ -8,7 +8,7 @@ require("dotenv").config()
 const port = process.env.PORT;
 connectDB();
 //Auth Router
-app.use("/",(req,res)=>{res.write("hello")})
+app.use("/",(req,res)=>{res.send("hello")})
 const authRouter=require("./Routes/AuthRouter")
 app.use("/api/auth/",authRouter)
 
